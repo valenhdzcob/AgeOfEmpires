@@ -1,0 +1,11 @@
+form{
+    width: 20rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.mat-form-field{
+    width: 80%;
+}
+.mat-dialog-actions{display: block;}
+.mat-dialog-title{font-size: 2rem;}
