@@ -1,5 +1,5 @@
 export const environment = {
 v2: {
-    api_url:'https://jsonplaceholder.typicode.com/photos?_limit=10'
+    api_url:'api/age-of-empires-2-api.herokuapp.com'
 }
 }
