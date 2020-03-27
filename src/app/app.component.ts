@@ -10,7 +10,9 @@ import { FormComponent } from './form/form.component';
 export class AppComponent {
   title = 'AgeOfEmpires';
 
-  constructor (public dialog: MatDialog) {}
+  constructor (public dialog : MatDialog) {
+
+  }
 
   openDialog(){
     const formconf = new MatDialogConfig();
@@ -25,6 +27,7 @@ export class AppComponent {
       {
         console.log(result);
       })
-
   }
+  
+  posts = [];
 }

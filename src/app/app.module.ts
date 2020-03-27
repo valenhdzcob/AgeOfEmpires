@@ -1,44 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'; 
-import {MatInputModule} from '@angular/material/input';
+import { MaterialModule } from './material.module';
+
+import { CivilizationsComponent } from './civilizations/civilizations.component';
+
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    CivilizationsComponent
   ],
   entryComponents: [FormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    MaterialModule
   ],
-  exports: [
-    MatButtonModule,
-    MatIconModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule
+  exports: [MaterialModule
+    
   ],
-  providers: [],
+  providers: [DataService,
+  /*{
+    //provide:HTTP_INTERCEPTORS,
+    //useClass:JwtInterceptor,
+    //multi:true
+  },
+  {
+    //provide:HTTP_INTERCEPTORS,
+    //useClass:ErrorInterceptor,
+    //multi:true
+  }*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
