@@ -12,11 +12,13 @@
     <div class="grid-container">
       <div class="content">
         <div class="content-icon">
+          <!--Create Honneycomb-->
           <div class="bee-icon">
             <div class="icon-option">
               <div *ngFor="let civ of civs.civilizations, let i=index" class="icon">
                 <div class="icon-inside">
                   <div class="icon-image">
+                    <!--Return data to the component-->
                     <a (click)='!!sendId(civ.id, civ.name, civ.expansion, civ.army_type)' #id>{{civ.id}}</a>
                   </div>
                 </div>

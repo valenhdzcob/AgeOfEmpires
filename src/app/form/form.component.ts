@@ -10,7 +10,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 export class FormComponent implements OnInit {
 
   constructor(private formBuilder : FormBuilder) { }
-  //// -----> Captura valores
+  //// -----> Get Values
   get name(){
     return this.regForm.get('name');
   }
@@ -20,7 +20,7 @@ export class FormComponent implements OnInit {
   get tel(){
     return this.regForm.get('tel');
   }
-  //// -----> Mensajes de Error
+  //// -----> Error Messages
   getErrorMessageName() {
     if (this.name.hasError('required')) {
       return 'Campo obligatorio';
@@ -39,7 +39,7 @@ export class FormComponent implements OnInit {
       return 'Campo obligatorio';
     }return this.tel.hasError('pattern') ? 'Formato de teléfono incorrecto' : '';
   }  
-  // -----> Reglas de validación de los campos
+  // -----> Fields validation rules
   regForm = this.formBuilder.group ({
     name: ['', [Validators.required, Validators.pattern('[a-zA-Z ]{3}')]],
     email:['',[Validators.required, Validators.email]],

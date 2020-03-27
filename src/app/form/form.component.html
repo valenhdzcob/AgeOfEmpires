@@ -4,18 +4,21 @@
     <mat-form-field example-full-width>
       <mat-label>Nombre</mat-label>
       <input matInput formControlName="name" required>
+      <!--Validate the fields-->
       <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
     </mat-form-field>
     <br>
     <mat-form-field>
       <mat-label full-width-field>Email</mat-label>
       <input matInput formControlName="email" required>
+      <!--Validate the fields-->
       <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
     </mat-form-field>
     <br>
     <mat-form-field>
       <mat-label>Teléfono</mat-label>
       <input matInput formControlName="tel" required>
+      <!--Validate the fields-->
       <mat-error *ngIf="tel.invalid">{{getErrorMessageTel()}}</mat-error>
     </mat-form-field>
     <br>
@@ -26,7 +29,7 @@
     <br>
   </mat-dialog-content>
   <mat-dialog-actions>
-    <button mat-raised-button color="primary" mat-button mat-dialog-close="true" (click)="save()">Guardar</button>
-    <button mat-button mat-dialog-close="false" (click)="close()">Salir</button>
+    <button style="background-color: #172122; color:white;" mat-raised-button mat-button mat-dialog-close="true" (click)="save()">Guardar</button>
+    <button mat-raised-button mat-dialog-close="false" (click)="close()">Salir</button>
   </mat-dialog-actions>
 </form>

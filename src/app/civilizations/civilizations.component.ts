@@ -10,11 +10,10 @@ import { CivilizationsService } from '../services/civilizations.service';
 
 export class CivilizationsComponent{
 
-  //Crear arreglo  
+  //Create Array
   civs : Civilizations[] =[];
   title= "CIVILIZACIÓN";
-  name ="";
-  //Imágenes de iconos
+  //Images for icons
   imags=[
     'https://steamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/',
     'https://TTsteamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/',
@@ -22,16 +21,13 @@ export class CivilizationsComponent{
     'https://TTsteamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/', 
     'https://steamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/'   
   ];
-  //Recibe el Id del ícono 
+  //Get the icon Id
     sendId(i,x,y,z) {
-      console.log(i,x,y,z);
-      this.name = i;
-      
+      //Show in console
+      console.log(i,x,y,z);      
   }
-  //Recibe los datos de la API y las guarda en un arreglo
+  //Get API data and save it in to array
   constructor(public civService:CivilizationsService) {
-    
-
     this.civService.getCivs(). subscribe(civdata =>
       {
         this.civs=civdata;
