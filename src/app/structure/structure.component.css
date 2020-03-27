@@ -1,0 +1,157 @@
+body{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    color:#1a0d04;
+    font-family: 'Raleway';
+  }
+  h1{
+    text-align: center;
+    font-size: 2rem;
+  }
+  .grid-container{margin-left:5%;margin-right: 5%;}
+  .bee-icon{
+    position: relative;
+    width: 80%;  
+    height: 50vh;
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    width: 12.5rem;
+    height: 6.25rem;
+    position: relative;
+    display: block;
+    transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    overflow: hidden;
+    visibility: hidden;
+    float: left;
+  }
+  
+  .icon-inside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    overflow: hidden;
+  }
+  
+  .icon-image {
+    width: 100%;
+    height: 100%;
+    background-color: #bd8047;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50%;
+    transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    visibility: visible;
+  }
+  
+  .icon-option {
+    position: absolute;
+    width: 100%;
+    left: 5.3rem;
+  }
+  
+  .icon {
+    margin-right: -5.5%;
+    margin-left: -5.5%;
+    margin-top: 0.2%;
+    margin-bottom: -5%;
+    
+    display: inline;
+  }
+  .icon:hover{
+    filter:blur(2px);
+  }
+  .icon:nth-child(2n+2) {
+    margin-top: 6%;
+  }
+  
+  .icon-option .icon:nth-child(6n+7) {
+    clear: left;
+  }
+  a{
+    cursor: pointer;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+  }
+  .content-icon
+  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex:1;
+  }
+  .content-info{
+    width: 50%;
+  }
+  .content-image{
+    width: 30%;
+    height:auto;
+    background-image:url(../../assets/Back-Full-Img.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  @media (max-width:1600px) and( min-width:1930px){
+    .bee-icon{width: 90%;}
+  }
+  @media(max-width:1440px){.bee-icon{width: 100%;}}
+  @media(max-width:1044px)
+  {
+    .icon {
+      width: 6.25rem;
+      height: 3.12rem;
+      position: relative;
+      display: block;
+      transform: rotate(120deg);
+      -moz-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+      -o-transform: rotate(120deg);
+      -webkit-transform: rotate(120deg);
+      overflow: hidden;
+      visibility: hidden;
+      float: left;
+    }
+    .icon-option .icon:nth-child(6n+7) {
+      clear: left;
+    }
+    .bee-icon{
+      width: 100%;
+      height: 25vh;
+    }
+    .icon {
+      margin-right: -3.5%;
+      margin-left: -3.5%;
+      margin-top: -1.2%;
+      margin-bottom: -2%;    
+      display: inline;
+    }
+    .icon:nth-child(2n) {
+      margin-top: 3%;
+    }
+  }

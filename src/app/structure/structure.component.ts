@@ -1,19 +1,15 @@
-import { Component } from '@angular/core';
-import { Civilizations } from '../models/civilizations'
-import { CivilizationsService } from '../services/civilizations.service';
-
+import { Component, OnInit } from '@angular/core';
+import { Structure } from '../models/structure';
+import { StructureService } from '../services/structure.service';
 @Component({
-  selector: 'app-civilizations',
-  templateUrl: './civilizations.component.html',
-  styleUrls: ['./civilizations.component.css']
+  selector: 'app-structure',
+  templateUrl: './structure.component.html',
+  styleUrls: ['./structure.component.css']
 })
+export class StructureComponent{
 
-export class CivilizationsComponent{
-
-  //Crear arreglo  
-  civs : Civilizations[] =[];
-  title= "CIVILIZACIÓN";
-  name ="";
+  sus : Structure[] =[];
+  title= "ESTRUCTURAS";
   //Imágenes de iconos
   imags=[
     'https://steamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/',
@@ -25,16 +21,13 @@ export class CivilizationsComponent{
   //Recibe el Id del ícono 
     sendId(i,x,y,z) {
       console.log(i,x,y,z);
-      this.name = i;
-      
   }
   //Recibe los datos de la API y las guarda en un arreglo
-  constructor(public civService:CivilizationsService) {
-    
-
-    this.civService.getCivs(). subscribe(civdata =>
+  constructor(public structureService:StructureService) {
+    this.structureService.getStruc().subscribe(susdata =>
       {
-        this.civs=civdata;
+        this.sus=susdata;
       })   
    }   
+
 }

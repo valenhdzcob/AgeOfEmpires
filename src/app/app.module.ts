@@ -10,13 +10,19 @@ import { MaterialModule } from './material.module';
 
 import { CivilizationsComponent } from './civilizations/civilizations.component';
 
-import { DataService } from './services/data.service';
+import { CivilizationsService } from './services/civilizations.service';
+import { UnitsComponent } from './units/units.component';
+import { TechnologyComponent } from './technology/technology.component';
+import { StructureComponent } from './structure/structure.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    CivilizationsComponent
+    CivilizationsComponent,
+    UnitsComponent,
+    TechnologyComponent,
+    StructureComponent
   ],
   entryComponents: [FormComponent],
   imports: [
@@ -28,17 +34,7 @@ import { DataService } from './services/data.service';
   exports: [MaterialModule
     
   ],
-  providers: [DataService,
-  /*{
-    //provide:HTTP_INTERCEPTORS,
-    //useClass:JwtInterceptor,
-    //multi:true
-  },
-  {
-    //provide:HTTP_INTERCEPTORS,
-    //useClass:ErrorInterceptor,
-    //multi:true
-  }*/],
+  providers: [CivilizationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

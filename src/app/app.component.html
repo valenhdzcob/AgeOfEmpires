@@ -4,31 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
   <title>Age Of Empires</title>
 </head>
 
 <body>
   <header>
     <img src="../assets/microsoft.svg" alt="microsoft logo">
-  </header> 
+  </header>
   <main>
-    <section class="video">
-      <div class="videoB">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QFlVNtGJVDU?playlist=QFlVNtGJVDU&loop=1&autoplay=1&start=20&end=50" frameborder="0" allow="accelerometer; autoplay; loop; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
-      <div class="overlay">
-        <div class="videoF">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/QFlVNtGJVDU?playlist=QFlVNtGJVDU&loop=1&autoplay=1&start=20&end=50" frameborder="0" allow="accelerometer;  autoplay; loop; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="intro">
+      <div class="back-video">
+        <div class="back-video-blur">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QFlVNtGJVDU?playlist=QFlVNtGJVDU&loop=1&autoplay=1&start=20&end=50" frameborder="0" allow="accelerometer; autoplay; loop; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="videoF_content">
-          <img src="../assets/Aoe_Logo.png" alt="Age Of Empires Logo">
-          <h4>Valentina Hernández</h4>
       </div>
+      <div class="overlay">
+        <div class="front-video">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/QFlVNtGJVDU?playlist=QFlVNtGJVDU&loop=1&autoplay=1&start=20&end=50"
+            frameborder="0" allow="accelerometer;  autoplay; loop; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="video-content">
+        <img src="../assets/Aoe_Logo.png" alt="Age Of Empires Logo">
+        <p>Valentina Hernández</p>
       </div>
     </section>
-    <section class="icon">
-    </section>
-    <section>
+    <section class="app-civilizations">
       <app-civilizations></app-civilizations>
+    </section>
+    <section class="app-units">
+      <app-units></app-units>
+    </section>
+    <section class="app-structures">
+      <app-structure></app-structure>
+    </section>
+    <section class="app-technologies">
+      <app-technology></app-technology>
     </section>
     <div class="form">
       <button mat-fab mat-button (click)="openDialog()">

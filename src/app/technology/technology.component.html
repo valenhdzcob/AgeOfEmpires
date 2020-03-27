@@ -14,10 +14,10 @@
         <div class="content-icon">
           <div class="bee-icon">
             <div class="icon-option">
-              <div *ngFor="let civ of civs.civilizations, let i=index" class="icon">
+              <div *ngFor="let tech of tech.technologies | slice:1:14, let i=index" class="icon">
                 <div class="icon-inside">
                   <div class="icon-image">
-                    <a (click)='!!sendId(civ.id, civ.name, civ.expansion, civ.army_type)' #id>{{civ.id}}</a>
+                    <a (click)='!!sendId(tech.id, tech.name, tech.expansion, tech.age)'></a>
                   </div>
                 </div>
               </div>
@@ -26,9 +26,9 @@
           <div class="content-info">
             <h2>Información:</h2>
             <div class="content-text">
-              <p #name>Nombre: {{name}} </p>
+              <p>Nombre: {{name}} </p>
+              <p>Descripción: {{description}}</p>
               <p>Expansión: {{expansion}}</p>
-              <p>Tipo de Arma: {{army_type}}</p>
             </div>
           </div>
         </div>

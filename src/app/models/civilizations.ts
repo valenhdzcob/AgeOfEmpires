@@ -1,7 +1,10 @@
 export interface Civilizations{
-    albumId: number;
     id:number;
-    title: string;
-    url: string;
-    thumbnailUrl: string
+    name:string;
+    expansion:string;
+    army_type:string;
+    unique_unit:[];
+    unique_tech:[];
+    team_bonus:string;
+    civilization_bonus:[];
 }
