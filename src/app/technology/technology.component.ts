@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Technology } from '../models/technology'
 import { TechnologyService } from '../services/technology.service';
+
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
@@ -10,6 +11,7 @@ export class TechnologyComponent{
 
     //Crear arreglo  
     tech : Technology[] =[];
+    selectedN : Technology;
     title= "TECNOLOGÍA";
     //Imágenes de iconos
     imags=[
@@ -30,4 +32,7 @@ export class TechnologyComponent{
           this.tech=techdata;
         })   
      }   
+     onSelect(nam:Technology){
+      this.selectedN = nam;
+    }
 }

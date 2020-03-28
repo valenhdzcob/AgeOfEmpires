@@ -6,37 +6,31 @@
 </head>
 
 <body>
-
   <h1>{{title}}</h1>
   <main>
     <div class="grid-container">
       <div class="content">
         <div class="content-icon">
           <!--Create Honneycomb-->
-          <div class="bee-icon">
-            <div class="icon-option">
-              <div *ngFor="let civ of civs.civilizations, let i=index" class="icon">
-                <div class="icon-inside">
-                  <div class="icon-image">
-                    <!--Return data to the component-->
-                    <a (click)='!!sendId(civ.id, civ.name, civ.expansion, civ.army_type)' #id>{{civ.id}}</a>
+          <div class="wrapper">
+            <section class="hex-grid">
+              <div *ngFor="let civ of civs.civilizations" class="grid-item repeat-animation">
+                <div class="inner">
+                  <div class="inner-inner" style="background-color: red;">
+                    <a (click)='!!onSelect(civ)' class="grid-info">
+                    </a>                    
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
-          <div class="content-info">
-            <h2>Información:</h2>
-            <div class="content-text">
-              <p #name>Nombre: {{name}} </p>
-              <p>Expansión: {{expansion}}</p>
-              <p>Tipo de Arma: {{army_type}}</p>
-            </div>
+          <app-civs-details [selectedN]='selectedN'></app-civs-details>
+        </div>
+        <div class="content-image">
+          <div class="full-icon-image">
+            <div class="image_i"></div>
           </div>
         </div>
-          <div class="content-image">
-            <div class="full-icon-image-"></div>
-          </div>
       </div>
     </div>
   </main>

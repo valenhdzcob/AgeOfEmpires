@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Civilizations } from '../models/civilizations'
-import {environment} from '../environments/environments'
-
+import {Civilizations } from '../models/civilizations';
+import {environment} from '../environments/environments';
 @Injectable({
   providedIn: 'root'
 })

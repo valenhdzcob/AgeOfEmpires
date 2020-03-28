@@ -1,0 +1,9 @@
+.content{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+}
+.content-text{
+    margin: auto;
+    max-width: 50%;
+}

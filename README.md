@@ -24,6 +24,3 @@ npm start
 Abrir en:
 ```
 htttp://localhost:4200/
-```
-
-No hay implementación de css adaptable completo.

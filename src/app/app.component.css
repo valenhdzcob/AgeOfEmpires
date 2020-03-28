@@ -9,58 +9,6 @@ header {
 header img {
   height: 55%;
 }
-/*
-.video,
-.videoB {
-  position: relative;
-  width: 100%;
-  height: 93vh;
-}
-
-.videoB iframe {
-  width: 100%;
-  height: 100%;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.videoF,
-.videoF_content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.videoF_content img {
-  width: 40%;
-}
-
-.videoF iframe {
-  width: 80%;
-  height: 80%;
-
-}
-
-h4 {
-  color: Red;
-}
-
-.icon {
-  display: flex;
-  flex-direction: row;
-}*/
 .intro{
     width: 100%;
     height:75vh;
@@ -141,4 +89,80 @@ h4 {
   left: 0;
   background-color: #b0a166;
   color: #fff;
+}
+@media (min-width: 1200px) and (max-width:1600px){
+  .intro, .back-video, .back-video-blur{
+    height: 70vh;
+  }
+  .overlay, .front-video{
+    height: 60vh;
+  }
+  .video-content{
+    height: 50vh;
+  }
+  .video-content img{
+    padding-top: 1rem;
+    width: 40%;
+  }
+}
+@media (min-width: 768px) and (max-width:1199px) {
+  .intro, .back-video, .back-video-blur{
+    height: 50vh;
+  }
+  .overlay, .front-video{
+    height: 40vh;
+  }
+  .video-content{
+    height: 30vh;
+  }
+  .video-content img{
+    padding-top: 1rem;
+    width: 50%;
+  }
+}
+@media (min-width: 725px) and (max-width: 768px) {
+  .intro, .back-video, .back-video-blur{
+    height: 50vh;
+  }
+  .overlay, .front-video{
+    height: 40vh;
+  }
+  .video-content{
+    height: 30vh;
+    width: 70%;
+  }
+  .video-content img{
+    padding-top: 1rem;
+    width: 60%;
+    padding-bottom: 0;
+  }
+  .video-content p{
+    margin-top: 0;
+  }
+}
+@media (max-width: 725px) {
+  header{
+    height: 5rem;
+  }
+  .intro, .back-video, .back-video-blur{
+    height: 60vh;
+  }
+  .overlay, .front-video{
+    height: 50vh;
+  }
+  .video-content{
+    height: 40vh;
+    width: 70%;
+  }
+  .video-content img{
+    padding-top: 1rem;
+    width: 70%;
+    padding-bottom: 0;
+  }
+  .video-content p{
+    width: 50%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }

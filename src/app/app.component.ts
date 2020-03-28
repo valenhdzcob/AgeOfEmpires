@@ -28,6 +28,8 @@ export class AppComponent {
         console.log(result);
       })
   }
-  
+  myFunction(){
+    alert('hola');
+  }
   posts = [];
 }

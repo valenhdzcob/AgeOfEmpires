@@ -6,35 +6,31 @@
 </head>
 
 <body>
-
   <h1>{{title}}</h1>
   <main>
     <div class="grid-container">
       <div class="content">
         <div class="content-icon">
-          <div class="bee-icon">
-            <div class="icon-option">
-              <div *ngFor="let unit of units.units | slice:1:16, let i=index" class="icon">
-                <div class="icon-inside">
-                  <div class="icon-image">
-                    <a (click)='!!sendId(unit.id, unit.name, unit.expansion, unit.age)'></a>
+          
+          <div class="wrapper">
+            <section class="hex-grid">
+              <div *ngFor="let unit of units.units | slice:1:16" class="grid-item repeat-animation">
+                <div class="inner">
+                  <div class="inner-inner" style="background-color: red;">
+                    <a (click)='!!onSelect(unit)' class="grid-info">
+                    </a>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
-          <div class="content-info">
-            <h2>Información:</h2>
-            <div class="content-text">
-              <p>Nombre: {{name}} </p>
-              <p>Descripción: {{description}}</p>
-              <p>Expansión: {{expansion}}</p>
-            </div>
+          <app-unit-details [selectedN]='selectedN'></app-unit-details>
+        </div>
+        <div class="content-image">
+          <div class="full-icon-image">
+            <div class="image_i"></div>
           </div>
         </div>
-          <div class="content-image">
-            <div class="full-icon-image-"></div>
-          </div>
       </div>
     </div>
   </main>

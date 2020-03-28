@@ -11,6 +11,8 @@ export class UnitsComponent{
 
    //Crear arreglo  
    units : Units[] =[];
+
+   selectedN : Units;
    title= "UNIDADES";
    //Imágenes de iconos
    imags=[
@@ -20,15 +22,15 @@ export class UnitsComponent{
      'https://TTsteamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/', 
      'https://steamuserimages-a.akamaihd.net/ugc/950727242794142660/5C45A54D79ADC30764FDDFBDD3F99BDDBD8701F7/'   
    ];
-   //Recibe el Id del ícono 
-     sendId(i,x,y,z) {
-       console.log(i,x,y,z);
-   }
    //Recibe los datos de la API y las guarda en un arreglo
    constructor(public unitService:UnitsService) {
      this.unitService.getUn(). subscribe(unitsdata =>
        {
          this.units=unitsdata;
        })   
+    }
+    onSelect(un:Units){
+      this.selectedN = un;
+      console.log(un.name + 'sirvooo');
     }
 }

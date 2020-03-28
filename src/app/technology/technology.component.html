@@ -6,36 +6,34 @@
 </head>
 
 <body>
-
   <h1>{{title}}</h1>
   <main>
     <div class="grid-container">
       <div class="content">
         <div class="content-icon">
-          <div class="bee-icon">
-            <div class="icon-option">
-              <div *ngFor="let tech of tech.technologies | slice:1:14, let i=index" class="icon">
-                <div class="icon-inside">
-                  <div class="icon-image">
-                    <a (click)='!!sendId(tech.id, tech.name, tech.expansion, tech.age)'></a>
+
+          <div class="wrapper">
+
+            <section class="hex-grid">
+            <!--Slice array-->
+              <div *ngFor="let tech of tech.technologies | slice:1:14, let i=index" class="grid-item repeat-animation">
+                <div class="inner">
+                  <div class="inner-inner" style="background-color: red;" >
+                    <a (click)='!!onSelect(tech)' class="grid-info">
+                    </a>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
-          <div class="content-info">
-            <h2>Información:</h2>
-            <div class="content-text">
-              <p>Nombre: {{name}} </p>
-              <p>Descripción: {{description}}</p>
-              <p>Expansión: {{expansion}}</p>
+          <app-tech-details [selectedN]='selectedN'></app-tech-details>
+        </div>
+          <div class="content-image">
+            <div class="full-icon-image">
+              <div class="image_i"></div>
             </div>
           </div>
         </div>
-          <div class="content-image">
-            <div class="full-icon-image-"></div>
-          </div>
       </div>
-    </div>
   </main>
 </body>
