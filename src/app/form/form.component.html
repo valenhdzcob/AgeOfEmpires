@@ -1,6 +1,6 @@
-<form (submit)="enviar()" [formGroup]="regForm">
+<form (submit)="enviar()" [formGroup]="regForm" >
   <h1 mat-dialog-title>Contáctanos</h1>
-  <mat-dialog-content width='full'>
+  <mat-dialog-content width='full' @open>
     <mat-form-field example-full-width>
       <mat-label>Nombre</mat-label>
       <input matInput formControlName="name" required>
